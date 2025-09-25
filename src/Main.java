@@ -10,16 +10,20 @@ public class Main {
         String trash = "";
 
         System.out.println("Enter your birth month: ");
-        month = input.nextInt();
-
-        if (month >= 1 && month <= 12)
+        if (input.hasNext())
         {
-            System.out.println("You said your birth month is " + month);
-        }
-        else
-        {
-            System.out.println("Error! Please enter a valid month");
-        }
+            month = input.nextInt();
+            if (month <= 12 && month >= 1)
+            {
+                System.out.println("Your birth month is: " + month);
+            }
+            else
+            {
+                System.out.println("Invalid month");
+                System.out.println("\nExiting program. please enter valid month");
+                System.exit(0);
 
+            }
+        }
     }
 }
